@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "description": "Proyecto backend para restaurante",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
-    "test": "nodemon index.js"
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
