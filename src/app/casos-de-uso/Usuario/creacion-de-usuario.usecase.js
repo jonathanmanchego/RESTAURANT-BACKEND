@@ -15,8 +15,7 @@ class CreacionDeUsuarioUseCase {
       createdAt,
       updatedAt,
     });
-    const newUserCreated = await this.usuarioRepositorio.create(newUsuario);
-    return newUserCreated;
+    return await this.usuarioRepositorio.create(newUsuario);
   }
 }
 

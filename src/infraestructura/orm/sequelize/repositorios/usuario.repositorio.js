@@ -1,12 +1,8 @@
-const sequelize = require("../../../../../models");
+const GeneralRepositorio = require("./general.repositorio");
 
-class UsuarioRepositorio {
-  constructor(model) {
-    this.model = sequelize[model];
-  }
-
-  async create(usuario) {
-    return await this.model.create(usuario);
+class UsuarioRepositorio extends GeneralRepositorio{
+  constructor() {
+    super('User');    
   }
 }
 
