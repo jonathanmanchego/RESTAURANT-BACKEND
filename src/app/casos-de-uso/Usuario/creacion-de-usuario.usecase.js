@@ -1,3 +1,4 @@
+const InvalidUserError = require("../../dominio/Usuario/InvalidUser.error");
 const Usuario = require("../../dominio/Usuario/Usuario");
 
 class CreacionDeUsuarioUseCase {
@@ -6,7 +7,7 @@ class CreacionDeUsuarioUseCase {
   }
 
   async execute({ id, firstName, lastName, email, createdAt, updatedAt }) {
-    // TODO validaciones
+    this.validate({ firstName, lastName, email });
     const newUsuario = new Usuario({
       firstName,
       lastName,
@@ -15,7 +16,20 @@ class CreacionDeUsuarioUseCase {
       createdAt,
       updatedAt,
     });
-    return await this.usuarioRepositorio.create(newUsuario);
+    const userCreated = await this.usuarioRepositorio.create(newUsuario);
+    return new Usuario(userCreated);
+  }
+
+  validate({ firstName, lastName, email}) {
+    if (!firstName) {
+      throw new InvalidUserError('firstName is required');
+    }
+    if (!lastName) {
+      throw new InvalidUserError('lastName is required');
+    }
+    if (!email) {
+      throw new InvalidUserError('email is required');
+    }
   }
 }
 
