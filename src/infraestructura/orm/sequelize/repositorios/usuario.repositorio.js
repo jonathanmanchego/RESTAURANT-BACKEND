@@ -1,8 +1,8 @@
 const GeneralRepositorio = require("./general.repositorio");
 
-class UsuarioRepositorio extends GeneralRepositorio{
+class UsuarioRepositorio extends GeneralRepositorio {
   constructor() {
-    super('User');    
+    super("User");
   }
 }
 

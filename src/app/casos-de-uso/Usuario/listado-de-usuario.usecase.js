@@ -6,7 +6,6 @@ class ListadoDeUsuarioUseCase {
   }
 
   async execute() {
-    // TODO validaciones
     const usuariosCreateds = await this.usuarioRepositorio.getAll();
     return usuariosCreateds.map(usuarioCreated => (new Usuario(usuarioCreated)));
   }

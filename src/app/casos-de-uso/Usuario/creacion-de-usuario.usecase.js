@@ -20,15 +20,15 @@ class CreacionDeUsuarioUseCase {
     return new Usuario(userCreated);
   }
 
-  validate({ firstName, lastName, email}) {
+  validate({ firstName, lastName, email }) {
     if (!firstName) {
-      throw new InvalidUserError('firstName is required');
+      throw new InvalidUserError("firstName is required");
     }
     if (!lastName) {
-      throw new InvalidUserError('lastName is required');
+      throw new InvalidUserError("lastName is required");
     }
     if (!email) {
-      throw new InvalidUserError('email is required');
+      throw new InvalidUserError("email is required");
     }
   }
 }
