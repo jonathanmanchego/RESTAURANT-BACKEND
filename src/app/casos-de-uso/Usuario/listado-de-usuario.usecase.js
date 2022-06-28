@@ -1,4 +1,4 @@
-const Usuario = require("../../dominio/Usuario/Usuario");
+const Usuario = require("../../../dominio/Usuario/Usuario");
 
 class ListadoDeUsuarioUseCase {
   constructor({ usuarioRepositorio }) {

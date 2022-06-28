@@ -1,4 +1,4 @@
-const GeneralRepositorio = require("./general.repositorio");
+const GeneralRepositorio = require("../../infraestructura/orm/sequelize/repositorios/general.repositorio");
 
 class UsuarioRepositorio extends GeneralRepositorio {
   constructor() {

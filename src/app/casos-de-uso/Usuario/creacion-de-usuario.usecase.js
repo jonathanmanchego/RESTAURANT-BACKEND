@@ -1,5 +1,5 @@
-const InvalidUserError = require("../../dominio/Usuario/InvalidUser.error");
-const Usuario = require("../../dominio/Usuario/Usuario");
+const InvalidUserError = require("../../../dominio/Usuario/InvalidUser.error");
+const Usuario = require("../../../dominio/Usuario/Usuario");
 
 class CreacionDeUsuarioUseCase {
   constructor({ usuarioRepositorio }) {
