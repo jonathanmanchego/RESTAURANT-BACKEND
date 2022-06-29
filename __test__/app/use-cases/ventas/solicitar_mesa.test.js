@@ -14,6 +14,7 @@ describe("solicitar_mesa use case", () => {
   it("should return a mesa disponible", async() => {
     const mesaRequisitos = {
       cantPersonas: 2,
+      restauranteId: "1",
     };
     const mesa = await solicitarMesaUseCase.execute(mesaRequisitos);
     expect(mesa).to.be.an.instanceOf(Mesa);
@@ -21,6 +22,7 @@ describe("solicitar_mesa use case", () => {
   it("should throw \"No hay mesas disponibles\"", async() => {
     const mesaRequisitos = {
       cantPersonas: 10,
+      restauranteId: "1",
     };
     await expect(
       solicitarMesaUseCase.execute(mesaRequisitos)

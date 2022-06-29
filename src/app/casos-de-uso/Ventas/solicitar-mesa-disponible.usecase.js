@@ -6,9 +6,10 @@ class SolicitarMesaDisponibleUseCase {
     this.mesaRepositorio = mesaRepositorio;
   }
 
-  async execute({ cantPersonas }) {
+  async execute({ cantPersonas, restauranteId }) {
     const mesas = await this.mesaRepositorio.obtenerMesasDisponibles({
       cantPersonas,
+      restauranteId,
     });
     if (mesas.length === 0) {
       throw new NotAvailableMesa("No hay mesas disponibles");

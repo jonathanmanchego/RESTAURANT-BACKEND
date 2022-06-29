@@ -5,10 +5,11 @@ class MesaRepositorio extends GeneralRepositorio {
     super("Mesa");
   }
 
-  obtenerMesasDisponibles({ cantPersonas }) {
+  obtenerMesasDisponibles({ cantPersonas, restauranteId }) {
     return this.model.findAll({
       where: {
         estado: true,
+        restauranteId,
         // cantPersonas,
       },
     });
