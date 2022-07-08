@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
+    "start": "node index.js",
     "test": "mocha __test__/**/*.test.js",
     "dev": "nodemon index.js",
     "lint": "eslint --ext .js src/**/**/**/*.js"
